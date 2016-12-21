@@ -161,8 +161,7 @@ if $LD --help 2>&1 | $GREP '\-z now ' > /dev/null; then
 fi
 AC_SUBST([HARDENING_CFLAGS])
 
-dnl FIXME: removed -Werror
-CFLAGS="$CFLAGS -Wall -Wreturn-type -Wsign-compare"
+CFLAGS="$CFLAGS -Wall -Werror -Wreturn-type -Wsign-compare"
 
 AC_CONFIG_FILES(Makefile                   \
 		dist/libtpms.spec          \
