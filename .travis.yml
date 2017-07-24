@@ -2,4 +2,4 @@ language: c
 dist: trusty
 before_install:
   - sudo apt-get install automake autoconf libtool libssl-dev sed make gawk sed bash dh-exec
-script: ./bootstrap.sh && ./configure --with-openssl --prefix=/usr && make -j4 check
+script: ./bootstrap.sh && ./configure --with-openssl --prefix=/usr --with-tpm2 && make -j4 check
